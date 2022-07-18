@@ -16,21 +16,9 @@ spec:
     metadata:
       labels:
         tier: frontend
-     spec:
-      containers:
-      - name: app1
-    image: supergiantkir/animals:bear
-    volumeMounts:
-    - name: app-storage
-      mountPath: /storage
-  - name: app2
-    image: yanivomc/spring-music:latest
-    volumeMounts:
-    - name: app-storage
-      mountPath: /storage
-  volumes:
-  - name: app-storage
-    hostPath:
-      path: /tmp/files
-      type: DirectoryOrCreate
+    spec:
+       containers: 
+        - name: nginx 
+          image: nginx:1.7.9 
+
 
