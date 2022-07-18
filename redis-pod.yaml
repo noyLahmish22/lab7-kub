@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: app
+            operator: NotIn
+            values:
+            - mysql
+    
+  containers:
+  - name: nginx 
+    image: nginx:1.7.9 
+
+
+
