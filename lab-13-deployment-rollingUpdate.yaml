@@ -7,8 +7,8 @@ metadata:
 spec:
   replicas: 6
   strategy:
-    type: RollingUpdate
-      rollingUpdate:
+     type: RollingUpdate
+     rollingUpdate:
         maxSurge: 25%       # how many pods we can add at a time
         maxUnavailable: 100%
   selector:
