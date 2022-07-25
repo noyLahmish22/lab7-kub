@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: yanivomc-deployment
   labels:
-    app: nginx
+    app: frontened
 spec:
-  replicas: 6
+  replicas: 2
   strategy:
      type: RollingUpdate
      rollingUpdate:
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx
+        app: frontened
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: yanivomc
+        image: yanivomc/spring-music:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
