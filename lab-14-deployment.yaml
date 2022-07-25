@@ -18,4 +18,4 @@ spec:
       - name: frontend
         image: yanivomc/spring-music:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
