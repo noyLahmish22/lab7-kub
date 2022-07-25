@@ -7,12 +7,10 @@ spec:
   selector:
     app: frontend    # Run on any pod(s) with label - app: myapp
   ports:          # Map incoming port to target port
-  - name: http-web    # Setting multiple ports listterns 
-    protocol: TCP
+  - name: http-web  
     port: 80
     targetPort: 8080
   - name: https-managment
-    protocol: TCP
     port: 80
     targetPort: 8080
     
