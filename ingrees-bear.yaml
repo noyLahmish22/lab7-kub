@@ -25,7 +25,7 @@ spec:
              name: bear-svc
              port:
                 number: 80
-   - host: moose.34.251.223.118.nip.io
+  - host: moose.34.251.223.118.nip.io
     http: 
       paths:
       - path: /
