@@ -17,11 +17,12 @@ spec:
   ingressClassName: nginx
   rules:
   - host: bear
+    http:
       paths:
-      - path: /bear(/|$)(.*)
+      - path: /
         pathType: Prefix
         backend:
-          service:
-             name: bear-svc
-             port:
-                number: 80
+          service: 
+            name: bear-svc
+            port: 
+              number: 80
