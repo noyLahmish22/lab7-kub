@@ -8,7 +8,6 @@ database_test:
 # service_type should be NodePort, ClusterIP or LoadBalancer
 service_type: ClusterIP
 replicas: 1
-generator: helm
 
 
 pod:
